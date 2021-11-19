@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Accordion from "../components/Accordion/Accordion"
 import HeroComponent from "../components/Hero/Hero"
 import data from '../Data/faq.json'
+import SEO from "../components/SEO/Seo"
 
 const ContactUsStyles = styled.div`
   background-color: var(--cayman);
@@ -46,6 +47,7 @@ const ContactPage = () => {
   ].reverse()
   return (
     <ContactUsStyles>
+      <SEO title="contact us" />
         <HeroComponent data={imageData} size='60' className='contact-hero'>
         <section className="container">
           <h1>Contact Us</h1>

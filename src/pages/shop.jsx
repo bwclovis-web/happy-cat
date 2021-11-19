@@ -1,9 +1,12 @@
 import * as React from "react"
+import SEO from "../components/SEO/Seo"
 
 
 const ShopPage = () => (
-  
-  <h1> OH HAI</h1>  
+  <>
+    <SEO title="Shop page" />
+    <h1> OH HAI</h1>  
+  </>
 )
 
 

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Happy cat tie dye",
+    "description": "Custom made tie die artwork"
   },
   plugins: [
     "gatsby-plugin-styled-components",

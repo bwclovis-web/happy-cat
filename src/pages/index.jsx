@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import HeroComponent from "../components/Hero/Hero"
+import SEO from "../components/SEO/Seo"
 
 
 const IndexPage = () => {
@@ -23,7 +24,10 @@ const IndexPage = () => {
   ].reverse()
 
   return (
-    <HeroComponent data={imageData} size='100'/>
+    <>
+      <SEO title="Home page" />
+      <HeroComponent data={imageData} size='100'/>
+    </>
   )
 }
 
