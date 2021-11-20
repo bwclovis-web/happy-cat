@@ -16,8 +16,6 @@ const NavStyles = styled.header `
         }
     }
 
-    
-
     .h1 {
         padding-bottom: 0;
         color: var(--coral);

@@ -9,7 +9,7 @@ const ProfileCard = ({image}) => (
     <StyledProfileCard>
         <div className="content">
             <GatsbyImage image={image} />
-            <h2>Amanda Angel</h2>
+            <h2>Amanda Clovis</h2>
             <ul>
                <li>
                     <a className="social">
