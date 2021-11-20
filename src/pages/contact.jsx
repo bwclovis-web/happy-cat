@@ -50,7 +50,7 @@ const ContactPage = () => {
           </section>
         </HeroComponent>
 
-      <StyledSixty className='container'>
+      <StyledSixty className='container' inverted={false}>
         <section>
           <h2>Frequently Asked Questions</h2>
           <Accordion data={data}/>

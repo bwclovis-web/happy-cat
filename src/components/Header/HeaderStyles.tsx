@@ -36,7 +36,6 @@ const NavStyles = styled.header `
         }
 
         li {
-
             &:not(:last-child) {
                 border-right: 1px solid var(--coral);
             }

@@ -13,7 +13,7 @@ const StyledSixty = styled.div`
         gap: clamp(2rem, 4vw, 6rem);
 
         section:first-child {
-            width: 60%;
+            width: ${props => props.inverted ? '' : '60%'};
         }
     }
 `
