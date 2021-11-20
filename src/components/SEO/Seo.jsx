@@ -1,12 +1,11 @@
 
 
 import * as React from "react"
-import { SeoI } from './interfaces'
 import { graphql, useStaticQuery } from "gatsby"
 import { formatTitle } from './utility'
 import { Helmet } from "react-helmet"
 
-const SEO: React.FC<SeoI> = ({ children, description, location, title, image }) => {
+const SEO = ({ description, location, title, image }) => {
     const { site } = useStaticQuery(
         graphql`
           query {

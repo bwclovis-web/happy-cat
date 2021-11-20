@@ -9,7 +9,7 @@ const HeroComponent = ({data, size, children, className}) => (
       style={{
           position: "relative",
           top: 0,
-          width: '100vw',
+          width: '100%',
           height: `${size}vh`,
           backgroundSize: 'cover',
           display: "flex",

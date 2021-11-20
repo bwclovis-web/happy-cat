@@ -1,10 +1,12 @@
 import * as React from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Accordion from "../components/Accordion/Accordion"
 import HeroComponent from "../components/Hero/Hero"
 import data from '../Data/faq.json'
 import SEO from "../components/SEO/Seo"
+import StyledSixty from "../components/Containers/Sixty/SixtyStyled"
+import ContactUsForm from "../components/Forms/ContactForm/ContactForm"
 
 const ContactUsStyles = styled.div`
   background-color: var(--cayman);
@@ -24,8 +26,6 @@ const ContactUsStyles = styled.div`
     }
   }
 `
-
-console.log(data)
 
 const ContactPage = () => {
   const imageQuery = useStaticQuery(
@@ -48,20 +48,22 @@ const ContactPage = () => {
   return (
     <ContactUsStyles>
       <SEO title="contact us" />
-        <HeroComponent data={imageData} size='60' className='contact-hero'>
-        <section className="container">
+        <HeroComponent data={imageData} size='40' className='contact-hero'>
+        <section className='container'>
           <h1>Contact Us</h1>
           <p>Have a question, comment, request? Let us know. Please check out the FAQ's below. </p>
           </section>
         </HeroComponent>
 
-      <div className="container split_2">
+      <StyledSixty className='container'>
         <section>
           <h2>F.A.Q's</h2>
           <Accordion data={data}/>
         </section>
-        <section></section>
-      </div>
+        <section>
+          <ContactUsForm />
+        </section>
+      </StyledSixty>
     </ContactUsStyles>
     
   )

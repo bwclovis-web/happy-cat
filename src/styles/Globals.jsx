@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     --coral: rgb(252, 146, 126);
     --cayman: rgb(82, 204, 186);
     --peacock: rgb(71, 153, 204);
+    --success: rgb(104, 148, 69);
     --white: #efe;
     --radius: .3rem;
   }
@@ -69,7 +70,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
       padding: 0 clamp(2rem, 3vw, 4rem);
       width: 100%;

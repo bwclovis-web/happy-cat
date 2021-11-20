@@ -32,7 +32,7 @@ const Typography = createGlobalStyle`
   }
 
   h1, .h1 {
-    font-size: clamp(3.6rem, 5vw, 8.8rem);
+    font-size: clamp(7.6rem, 10vw, 10.8rem);
     line-height: 1;
     padding-bottom: clamp(1rem, 2vw, 2rem);
     font-family: 'Chicle-Regular';
