@@ -49,7 +49,7 @@ const ContactUsForm = () => {
                         <label htmlFor="email">E-Mail</label>
                     </div>
                     <div className="input-container">
-                    <label htmlFor="email">Message</label>
+                    <label htmlFor="message">Message</label>
                         <textarea 
                             id="message"
                             rows="5"
