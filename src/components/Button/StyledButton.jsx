@@ -4,7 +4,7 @@ const ButtonStyles = styled.button`
     font-size: 2.4rem;
     letter-spacing: .14rem;
     font-weight: 500;
-    background-color: ${props => props.submitStatus.succeeded ? 'var(--success)': 'rgba(255,255,255, 0.15)'};
+    background-color: rgba(255,255,255, 0.15);
     border: 4px solid rgba(0,0,0,0.2);
     padding: 2rem 2.6rem;
     color: ${props => props.submitStatus.submitting ? '' : 'var(--black)'};

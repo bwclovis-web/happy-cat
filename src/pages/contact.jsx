@@ -10,11 +10,6 @@ import ContactUsForm from "../components/Forms/ContactForm/ContactForm"
 
 const ContactUsStyles = styled.div`
   background-color: var(--cayman);
-  height: 100vh;
-
-  .container {
-    padding-top: 4rem;
-  }
 
   .contact-hero {
     color: var(--cayman);
@@ -43,12 +38,12 @@ const ContactPage = () => {
   )
 
   const imageData = [imageQuery.image.childImageSharp.fluid, 
-    `linear-gradient(rgba(9, 13, 13, 0.9), rgba(9, 13, 13, 0.53))`
+    `linear-gradient(rgba(9, 13, 13, 0.9), rgba(9, 13, 13, 0.73))`
   ].reverse()
   return (
     <ContactUsStyles>
       <SEO title="contact us" />
-        <HeroComponent data={imageData} size='40' className='contact-hero'>
+        <HeroComponent data={imageData} size='60' className='contact-hero'>
         <section className='container'>
           <h1>Contact Us</h1>
           <p>Have a question, comment, request? Let us know. Please check out the FAQ's below. </p>
@@ -57,7 +52,7 @@ const ContactPage = () => {
 
       <StyledSixty className='container'>
         <section>
-          <h2>F.A.Q's</h2>
+          <h2>Frequently Asked Questions</h2>
           <Accordion data={data}/>
         </section>
         <section>

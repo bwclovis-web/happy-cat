@@ -1,11 +1,20 @@
 import styled from "styled-components"
 
 const StyledSixty = styled.div`
-    display: flex;
-    justify-content: space-between;
 
     section:first-child {
-        width: 60%;
+        padding-bottom: 4rem;
+    }
+
+    @media(min-width: 769px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: clamp(2rem, 4vw, 6rem);
+
+        section:first-child {
+            width: 60%;
+        }
     }
 `
 

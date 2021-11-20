@@ -7,12 +7,7 @@ const StyledContactForm = styled.form`
     border: 2px solid rgba(0,0,0, 0.1);
 
     legend {
-        font-family: 'Chicle-Regular';
-        font-size: 5.6rem;
-        padding: 0 2rem;
-        border-radius: 40px;
-        color: var(--black);
-        
+        padding: 2rem;
     }
 
     fieldset, textarea {

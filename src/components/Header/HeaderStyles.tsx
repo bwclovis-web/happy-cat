@@ -4,28 +4,38 @@ const NavStyles = styled.header `
     background-color: rgba(9, 13, 13, 0.9);
     position: relative;
     z-index: 2;
+    text-align: center;
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 3.2rem;
-        padding-bottom: 3.2rem;
+    @media(min-width: 786px) {
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 3.2rem;
+            padding-bottom: 3.2rem;
+        }
     }
+
+    
 
     .h1 {
         padding-bottom: 0;
         color: var(--coral);
-        letter-spacing: .34rem;
-        font-size: clamp(3.6rem, 5vw, 6.8rem);
+        letter-spacing: clamp(.1rem, 3vw, .34rem);
+        font-size: clamp(5.6rem, 6vw, 7.8rem);
     }
 
     ul {
         display: flex;
         list-style: none;
+        justify-content:center;
+        margin-top: 2rem;
+
+        @media(min-width: 786px) {
+            margin-top: 0;
+        }
 
         li {
-            padding-left: 1rem;
 
             &:not(:last-child) {
                 border-right: 1px solid var(--coral);
@@ -35,9 +45,12 @@ const NavStyles = styled.header `
 
     a {
         color: var(--coral);
-        padding-right: 1rem;
         text-transform: uppercase;
         letter-spacing: .1rem;
+
+        &:not(.h1) {
+            padding: 1rem 1.4rem;
+        }
     }
 `
 

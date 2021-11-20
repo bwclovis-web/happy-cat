@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { AccordionStylesI } from "./interfaces";
 
 const StyledAccordionItem = styled.li<AccordionStylesI>`
-border-bottom: 3px solid var(--coral);
+    border-bottom: 1rem dotted var(--coral);
+
     &:first-child {
         margin-top: 2.4rem;
+        border-top: 1rem dotted var(--coral);
     }
 
     button {
@@ -31,12 +33,12 @@ border-bottom: 3px solid var(--coral);
     }
 
     .active-icon {
-        background-color: ${props => props.active ? 'var(--amethyst)' : 'var(--cfBlue)'};
+        background-color: ${props => props.active ? 'var(--peacock)' : 'var(--black)'};
         min-width: 4rem;
         height: 4rem;
         display: block;
         text-align: center;
-        padding ${props => props.active ? '0.4rem 0 0' : '0.8rem 0 0'};
+        padding ${props => props.active ? '0.4rem 0 0' : '0.4rem 0 0'};
         border-radius: 50%;
         margin-right: 2rem;
         color: #fff;

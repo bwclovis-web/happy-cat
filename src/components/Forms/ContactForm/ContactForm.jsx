@@ -23,7 +23,7 @@ const ContactUsForm = () => {
     return (
         <StyledContactForm onSubmit={handleSubmit}>
             <fieldset aria-busy={state.submitting}>
-                    <legend className="h3">Drop us a message</legend>
+                    <legend className="h2">Drop us a message</legend>
                     <div className="input-container">
                         <input 
                             id="name"

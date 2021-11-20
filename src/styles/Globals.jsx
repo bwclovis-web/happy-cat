@@ -72,7 +72,10 @@ const GlobalStyles = createGlobalStyle`
   .container {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 0 clamp(2rem, 3vw, 4rem);
+      padding-top: clamp(2.6rem, 3vw, 6rem); 
+      padding-bottom: clamp(2.6rem, 3vw, 6rem);
+      padding-left: clamp(2rem, 3vw, 4rem);
+      padding-right: clamp(2rem, 3vw, 4rem);
       width: 100%;
   }
 

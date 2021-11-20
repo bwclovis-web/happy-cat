@@ -21,7 +21,7 @@ const Typography = createGlobalStyle`
   }
   p, li {
     letter-spacing: 0.5px;
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
     line-height: 1.5;
     font-weight: 500;
   }
@@ -29,6 +29,7 @@ const Typography = createGlobalStyle`
     font-weight: normal;
     margin: 0;
     font-family: 'Chicle-Regular';
+
   }
 
   h1, .h1 {
@@ -38,13 +39,16 @@ const Typography = createGlobalStyle`
     font-family: 'Chicle-Regular';
     text-decoration: none;
     text-transform: uppercase;
+    text-shadow: -0.7rem 0.7rem rgba(0,0,0,0.4);
   }
 
   h2, .h2 {
-    font-size: clamp(2.4rem, 2.5vw, 4.8rem);
+    font-size: 5.6rem;
     margin: 0;
-    font-family: 'LibreFranklin';
+    font-family: 'Chicle-Regular';
     font-weight: 600;
+    text-shadow: -0.32rem 0.32rem rgba(0,0,0,0.15);
+    line-height: .9;
   }
 
   h3, .h3 {
