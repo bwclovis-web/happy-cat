@@ -38,13 +38,14 @@ const StyledAccordionItem = styled.li<AccordionStylesI>`
         height: 4rem;
         display: block;
         text-align: center;
-        padding ${props => props.active ? '0.4rem 0 0' : '0.4rem 0 0'};
+        padding ${props => props.active ? '0.4rem 0 0' : '0.3rem 0 0'};
         border-radius: 50%;
         margin-right: 2rem;
-        color: #fff;
+        color: ${props => props.active ? 'var(--black)' : '#fff'};
         font-size: 3rem;
         font-weight: 700;
         line-height: 1;
+        border: 1px solid var(--black);
     }
 `
 export default StyledAccordionItem

@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Accordion from "../components/Accordion/Accordion"
 import HeroComponent from "../components/Hero/Hero"
 import data from '../Data/faq.json'
-import SEO from "../components/SEO/Seo"
+import Seo from "../components/SEO/Seo"
 import StyledSixty from "../components/Containers/Sixty/SixtyStyled"
 import ContactUsForm from "../components/Forms/ContactForm/ContactForm"
 
@@ -42,7 +42,7 @@ const ContactPage = () => {
   ].reverse()
   return (
     <ContactUsStyles>
-      <SEO title="contact us" />
+      <Seo title="contact us" />
         <HeroComponent data={imageData} size='60' className='contact-hero'>
         <section className='container'>
           <h1>Contact Us</h1>

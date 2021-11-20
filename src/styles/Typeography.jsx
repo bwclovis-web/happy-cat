@@ -43,7 +43,7 @@ const Typography = createGlobalStyle`
   }
 
   h2, .h2 {
-    font-size: 5.6rem;
+    font-size: 6.6rem;
     margin: 0;
     font-family: 'Chicle-Regular';
     font-weight: 600;

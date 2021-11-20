@@ -5,10 +5,11 @@ const GlobalStyles = createGlobalStyle`
     --black: rgb(9, 13, 13);
     --coral: rgb(252, 146, 126);
     --cayman: rgb(82, 204, 186);
-    --peacock: rgb(71, 153, 204);
-    --success: rgb(104, 148, 69);
+    --peacock: rgb(22, 195, 219);
+    --success: rgb(28, 140, 77);
+    --marino: rgba(128, 74, 64);
     --white: #efe;
-    --radius: .3rem;
+    --radius: .5rem;
   }
 
   *, *:before, *:after {
@@ -109,6 +110,12 @@ const GlobalStyles = createGlobalStyle`
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  section {
+    p:not(:last-child) {
+      padding-bottom: 4rem;
     }
   }
 
