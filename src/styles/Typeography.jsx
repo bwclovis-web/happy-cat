@@ -49,6 +49,7 @@ const Typography = createGlobalStyle`
     font-weight: 600;
     text-shadow: -0.32rem 0.32rem rgba(0,0,0,0.15);
     line-height: .9;
+    padding-bottom:clamp(2rem, 10vw, 4rem);
   }
 
   h3, .h3 {
