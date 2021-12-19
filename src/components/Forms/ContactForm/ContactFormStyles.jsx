@@ -2,9 +2,10 @@ import styled from "styled-components"
 
 const StyledContactForm = styled.form`
     background-color: rgba(0,0,0,0.05);
-    padding: 1rem;
+    padding: 1rem 1rem 4rem;
     border-radius: var(--radius);
     border: 2px solid rgba(0,0,0, 0.1);
+    box-shadow:  0 0 16px rgba(0,0,0,0.12);
 
     legend {
         padding: 2rem;
