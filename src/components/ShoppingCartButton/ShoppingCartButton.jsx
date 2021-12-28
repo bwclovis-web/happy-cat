@@ -1,25 +1,32 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Commerce from '@chec/commerce.js';
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import CartContext from "../../provider/provider";
+import {RiShoppingCartLine} from '@react-icons/all-files/ri/RiShoppingCartLine'
+import {RiShoppingCartFill} from '@react-icons/all-files/ri/RiShoppingCartFill'
 
 const ShoppingCartButton = () => {
-    const [cartItems, setCartItems] = useState()
-    const {toggleCart, cartOpen} = useContext(CartContext)
+    const {toggleCart, cartOpen, setItemsInCart, itemsInCart} = useContext(CartContext)
     const commerce = new Commerce(process.env.GATSBY_CHEC_PUBLIC_KEY);
 
+    useEffect(() => {
+        commerce.cart.contents().then((cart) => {
+            setItemsInCart(cart)
+        })
+    }, [])
 
     const handleCartClick = () => {
-        commerce.cart.retrieve().then((cart) => 
-            setCartItems(cart),
-            toggleCart()
-        );
+        toggleCart()
     }
+
+    console.log(itemsInCart)
 
     return (
         <>
-            <button onClick={handleCartClick}>OH HAI</button>
-            {cartOpen && <ShoppingCart data={cartItems}/>}
+            <button onClick={handleCartClick} className="cart-button">
+                {itemsInCart?.length ? <RiShoppingCartFill size={30}/> : <RiShoppingCartLine size={30}/>}
+            </button>
+            {cartOpen && <ShoppingCart data={itemsInCart}/>}
         </>
     )
 }

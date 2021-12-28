@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { graphql } from "gatsby";
 import Commerce from '@chec/commerce.js';
+import CartContext from "../provider/provider";
 
 
 export default function ProductPage({ data: { product } }) {
   const commerce = new Commerce(process.env.GATSBY_CHEC_PUBLIC_KEY);
+  const {setItemsInCart} = useContext(CartContext)
 
   const handleOnClick = () => {
-    console.log('clicked', product.id)
-    commerce.cart.add(product.id).then(res => localStorage.setItem('hctd_cart', res.cart.id))
+    commerce.cart.add(product.id).then(() => commerce.cart.contents().then((items) => setItemsInCart(items)))
   }
 
   return (

@@ -5,12 +5,13 @@ import CartContext from "../../provider/provider";
 
 const ShoppingCart = ({data}) => {
     const [loading, setLoading] = useState(true)
-    const {toggleCart, cartOpen} = useContext(CartContext)
+    const {toggleCart, cartOpen, itemsInCart} = useContext(CartContext)
     const cartRef = useRef()
 
     useEffect(() => {
-        data && setLoading(false)
-    }, [data])
+        console.log('SC DATA', data)
+        itemsInCart && setLoading(false)
+    }, [itemsInCart])
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -28,11 +29,13 @@ const ShoppingCart = ({data}) => {
         return 'loading'
     }
 
+    console.log('items',itemsInCart)
+
     return (
         <>
             <StyledShoppingCart ref={cartRef}>
                 <p>I be a cart</p>
-                {data.line_items.map(item => {
+                {data.map(item => {
                     return <ShoppingCartItem data={item}/>
                 })}
             </StyledShoppingCart>

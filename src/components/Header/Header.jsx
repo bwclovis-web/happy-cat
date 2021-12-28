@@ -10,7 +10,7 @@ const Header = () => (
       <Link to="/" className="h1">
         <span>Happy Cat Tie Dye</span>
       </Link>
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex', alignItems:'center'}}>
         <ul>
           <li>
             <Link to="/about">About us</Link>

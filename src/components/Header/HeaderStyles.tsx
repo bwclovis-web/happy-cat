@@ -49,6 +49,14 @@ const NavStyles = styled.header `
             padding: 1rem 1.4rem;
         }
     }
+
+    .cart-button {
+        padding: 1rem;
+    }
+
+    svg {
+        fill: var(--peacock);
+    }
 `
 
 export default NavStyles
