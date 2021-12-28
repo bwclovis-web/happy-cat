@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import HeroComponent from "../components/Hero/Hero"
 import Seo from "../components/SEO/Seo"
+import DataGrid from "../components/Containers/ProductGrid/DataGrid"
 
 
 const IndexPage = () => {
@@ -12,6 +13,28 @@ const IndexPage = () => {
           childImageSharp{
             fluid(quality: 90, maxWidth: 2000) {
               ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        products: allChecProduct(limit: 3) {
+          edges {
+            node {
+              id
+              active
+              name
+              price {
+                formatted_with_symbol
+              }
+              description
+              permalink
+              updated
+              images {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
           }
         }
@@ -26,7 +49,8 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="Home page" />
-      <HeroComponent data={imageData} size='100'/>
+      <HeroComponent data={imageData} size='75'/>
+      <DataGrid data={data.products.edges}/>
     </>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import NavStyles from './HeaderStyles'
+import ShoppingCartButton from '../ShoppingCartButton/ShoppingCartButton'
 
 const Header = () => (
   <NavStyles>
@@ -19,7 +20,9 @@ const Header = () => (
         <li>
           <Link to="/contact">contact</Link>
         </li>
+
       </ul>
+      <ShoppingCartButton />
     </nav>
   </NavStyles>
 )

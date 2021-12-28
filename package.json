@@ -18,8 +18,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
+    "@chec/gatsby-source-chec": "^1.3.0",
     "@formspree/react": "^2.2.4",
     "@react-icons/all-files": "^4.1.0",
+    "@types/chec__commerce.js": "^2.8.4",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.1.5",
     "gatsby-background-image": "^1.5.3",

@@ -2,7 +2,7 @@ import * as React from "react"
 import useFormHook from "../../../lib/useForm"
 import Button from "../../Button/Button"
 import StyledContactForm from "./ContactFormStyles"
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 
 
 const ContactUsForm = () => {

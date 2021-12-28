@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -9,6 +14,13 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "@chec/gatsby-source-chec",
+      options: {
+        publicKey: process.env.GATSBY_CHEC_PUBLIC_KEY,
+        downloadImageAssets: true,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

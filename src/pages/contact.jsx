@@ -40,6 +40,7 @@ const ContactPage = () => {
   const imageData = [imageQuery.image.childImageSharp.fluid, 
     `linear-gradient(rgba(9, 13, 13, 0.9), rgba(9, 13, 13, 0.73))`
   ].reverse()
+  
   return (
     <ContactUsStyles>
       <Seo title="contact us" />
