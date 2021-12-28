@@ -7,6 +7,7 @@ const StyledShoppingCart = styled.section`
     background-color: red;
     width: 30%;
     right: 0;
+    z-index: 20;
 `
 
 export default StyledShoppingCart;
