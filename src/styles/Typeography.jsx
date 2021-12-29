@@ -21,9 +21,9 @@ const Typography = createGlobalStyle`
   }
   p, li {
     letter-spacing: 0.5px;
-    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    font-size: clamp(1.6rem, 2vw, 2rem);
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 400;
   }
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;

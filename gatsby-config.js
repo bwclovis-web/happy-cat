@@ -15,10 +15,10 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
-      resolve: "@chec/gatsby-source-chec",
+      resolve: "gatsby-source-shopify",
       options: {
-        publicKey: process.env.GATSBY_CHEC_PUBLIC_KEY,
-        downloadImageAssets: true,
+        password: process.env.SHOPIFY_SHOP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
       },
     },
     {

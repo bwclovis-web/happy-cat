@@ -16,24 +16,24 @@ const IndexPage = () => {
             }
           }
         }
-        products: allChecProduct(limit: 3) {
-          edges {
-            node {
-              id
-              active
-              name
-              price {
-                formatted_with_symbol
+        products: allShopifyProduct {
+          nodes {
+            shopifyId
+            status
+            featuredImage {
+              gatsbyImageData
+            }
+            description
+            title
+            handle
+            priceRangeV2 {
+              maxVariantPrice {
+                currencyCode
+                amount
               }
-              description
-              permalink
-              updated
-              images {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
+              minVariantPrice {
+                amount
+                currencyCode
               }
             }
           }
@@ -50,7 +50,7 @@ const IndexPage = () => {
     <>
       <Seo title="Home page" />
       <HeroComponent data={imageData} size='75'/>
-      <DataGrid data={data.products.edges}/>
+      <DataGrid data={data.products.nodes}/>
     </>
   )
 }

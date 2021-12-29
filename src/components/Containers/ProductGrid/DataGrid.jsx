@@ -6,7 +6,7 @@ const DataGrid = ({ data }) => {
     return (
         <StyledDataGrid className="container">
             {data.map(item => {
-               return <ProductCard  product={item.node}/>
+               return <ProductCard  product={item}/>
             })}
         </StyledDataGrid>
     )

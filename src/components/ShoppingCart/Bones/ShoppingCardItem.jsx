@@ -1,18 +1,12 @@
 import React from "react";
-import Commerce from '@chec/commerce.js';
+import DeleteFromCartButton from "./DeleteFromCartButton";
 
 const ShoppingCartItem =({data}) => {
-    const commerce = new Commerce(process.env.GATSBY_CHEC_PUBLIC_KEY);
-
-    const handleDeleteItem = () => {
-        commerce.cart.remove(data.id)
-    }
-
     return (
         <li>
-            <span>Name: {data.name}</span>
+            <span>Name: {data.title}</span>
             <span>Quantity: {data.quantity}</span>
-            <button onClick={handleDeleteItem}>X</button>
+            <DeleteFromCartButton id={data.id} />
         </li>
     )
 }

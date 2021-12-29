@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState} from 'react';
 
 const useItemsInCart =() => {
     const [itemsInCart, setItemsInCart] = useState()

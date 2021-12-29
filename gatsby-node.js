@@ -2,28 +2,21 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
   
     const {
-      data: { allChecProduct },
+      data
     } = await graphql(`
       {
-        allChecProduct {
+        allShopifyProduct {
           nodes {
             id
-            permalink
-          }
-        }
-  
-        allChecCategory {
-          nodes {
-            id
-            slug
+            handle
           }
         }
       }
     `);
   
-    allChecProduct.nodes.forEach(({ id, permalink }) =>
+    data.allShopifyProduct.nodes.forEach(({ id, handle }) =>
       createPage({
-        path: `/shop/${permalink}`,
+        path: `/shop/${handle}`,
         component: require.resolve(`./src/templates/ProductTemplate.jsx`),
         context: {
           id,

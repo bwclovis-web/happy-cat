@@ -36,6 +36,10 @@ const StyledProfileCard = styled.section`
         border-radius: var(--radius);
         padding: 2rem;
 
+        span:first-child {
+            margin-top: -13rem;
+        }
+
         .gatsby-image-wrapper {
             border-radius: 50%;
             border: 6px solid var(--cayman);

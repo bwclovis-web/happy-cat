@@ -7,28 +7,25 @@ const ShopPage = () => {
   const pageQuery = useStaticQuery(
     graphql`
       query {
-        allProducts: allChecProduct {
-          edges {
-            node {
-              id
-              active
-              name
-              price {
-                formatted_with_symbol
+        allProducts: allShopifyProduct {
+          nodes {
+            shopifyId
+            id
+            status
+            handle
+            featuredImage {
+              gatsbyImageData
+            }
+            description
+            title
+            priceRangeV2 {
+              maxVariantPrice {
+                currencyCode
+                amount
               }
-              description
-              permalink
-              updated
-              images {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-              categories {
-                name
-                slug
+              minVariantPrice {
+                amount
+                currencyCode
               }
             }
           }
@@ -42,7 +39,7 @@ const ShopPage = () => {
       <Seo title="Shop page" />
       <section className="container">
         <h1>Whats in the Shop</h1>
-        <DataGrid data={pageQuery.allProducts.edges}/>
+        <DataGrid data={pageQuery.allProducts.nodes}/>
       </section> 
     </>
   )
