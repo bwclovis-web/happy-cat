@@ -43,7 +43,7 @@ const AboutPage = () => {
   return(
     <AboutPageStyles>
       <Seo title="About Us" />
-      <HeroComponent data={imageData} size='30' className='contact-hero'>
+      <HeroComponent data={imageData} size='60' className='contact-hero'>
         <section className='container'>
           <h1>Contact Us</h1>
           </section>
