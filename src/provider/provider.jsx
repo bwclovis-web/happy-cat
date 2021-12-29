@@ -8,8 +8,6 @@ const client = Client.buildClient({
 });
 
 const ctxDefaults = {
-    cartOpen: false,
-    cart: [],
     toggleCart:() => {},
     addVariantToCart: () => {},
     removeLineItem: () => {},

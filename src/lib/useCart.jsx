@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 const UseCart = () => {
     const [cartOpen, setCartOpen] = useState(false);
 
-    const toggleCart = useCallback(() => setCartOpen(!cartOpen), [cartOpen]);
+    const toggleCart = () => setCartOpen(!cartOpen);
 
     useEffect(() => {
         const root = document.documentElement;

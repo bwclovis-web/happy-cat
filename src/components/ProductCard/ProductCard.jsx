@@ -1,11 +1,10 @@
 import * as React from "react"
 import BackgroundImage from 'gatsby-background-image'
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import { Link } from "gatsby"
 
 const ProductCard = ({product}) => {
-    console.log(product)
     const image = getImage(product.featuredImage.gatsbyImageData)
     const bgImage = convertToBgImage(image)
 
