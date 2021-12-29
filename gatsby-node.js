@@ -31,13 +31,13 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     );
   
-    data.allShopifyCollection.nodes.forEach(({ id, handle }) =>
-      createPage({
-        path: `/shop/${handle}`,
-        component: require.resolve(`./src/templates/CategoryPage.js`),
-        context: {
-          id,
-        },
-      })
-    );
+    // data.allShopifyCollection.nodes.forEach(({ id, handle }) =>
+    //   createPage({
+    //     path: `/shop/${handle}`,
+    //     component: require.resolve(`./src/templates/CategoryPage.js`),
+    //     context: {
+    //       id,
+    //     },
+    //   })
+    // );
   };
