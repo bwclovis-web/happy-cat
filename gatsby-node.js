@@ -1,11 +1,18 @@
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
   
-    const {
-      data
-    } = await graphql(`
+    const {data} = await graphql(`
       {
         allShopifyProduct {
+          nodes {
+            id
+            handle
+            collections {
+              handle
+            }
+          }
+        }
+        allShopifyCollection {
           nodes {
             id
             handle
@@ -24,13 +31,13 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     );
   
-    // allChecCategory.nodes.forEach(({ id, slug }) =>
-    //   createPage({
-    //     path: `/categories/${slug}`,
-    //     component: require.resolve(`./src/templates/CategoryPage.js`),
-    //     context: {
-    //       id,
-    //     },
-    //   })
-    // );
+    data.allShopifyCollection.nodes.forEach(({ id, handle }) =>
+      createPage({
+        path: `/shop/${handle}`,
+        component: require.resolve(`./src/templates/CategoryPage.js`),
+        context: {
+          id,
+        },
+      })
+    );
   };

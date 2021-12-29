@@ -23,6 +23,9 @@ const IndexPage = () => {
             featuredImage {
               gatsbyImageData
             }
+            collections {
+              handle
+            }
             description
             title
             handle

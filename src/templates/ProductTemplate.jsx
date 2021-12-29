@@ -52,7 +52,7 @@ export default function ProductPage({ data: { product } }) {
   }, [productVariant.storefrontId, checkAvailability, product.storefrontId])
 
   const image = getImage(firstImage)
-
+console.log(product)
   return (
     <>
       <SEO title={product.title}/>

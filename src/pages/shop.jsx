@@ -13,6 +13,9 @@ const ShopPage = () => {
             id
             status
             handle
+            collections {
+              handle
+            }
             featuredImage {
               gatsbyImageData
             }
