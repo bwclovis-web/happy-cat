@@ -2,17 +2,15 @@ import * as React from "react"
 import ProductCard from "../../ProductCard/ProductCard";
 import StyledDataGrid from "./DataGridStyles";
 
-const DataGrid = ({ data }) => {
+const CategoryGrid = ({ data }) => {
+    console.log(data)
     return (
         <StyledDataGrid>
             {data.map(item => {
-                if(!item.variants[0].availableForSale) {
-                    return
-                }
-               return <ProductCard  product={item} key={item.id}/>
+               return <ProductCard product={item} key={item.id}/>
             })}
         </StyledDataGrid>
     )
 }
 
-export default DataGrid
+export default CategoryGrid

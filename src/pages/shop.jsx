@@ -13,11 +13,16 @@ const ShopPage = () => {
             id
             status
             handle
+            variants {
+              availableForSale
+            }
             collections {
               handle
             }
             featuredImage {
-              gatsbyImageData
+              gatsbyImageData(
+                width: 500
+              )
             }
             description
             title

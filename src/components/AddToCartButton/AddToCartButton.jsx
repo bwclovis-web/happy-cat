@@ -1,5 +1,6 @@
 import * as React from "react"
 import CartContext from "../../provider/provider";
+import Button from "../Button/Button";
 
 const AddToCartButton = ({varId, available}) => {
     const { addVariantToCart, loading } = React.useContext(CartContext)
@@ -9,13 +10,14 @@ const AddToCartButton = ({varId, available}) => {
     }
 
     return (
-        <button
+        <Button
           type="submit"
           onClick={addToCart}
           disabled={!available || loading}
+          submitStatus={loading}
         >
-          {available ? "Add to Cart" : "Out of Stock"}
-        </button>
+          {available ? "ADD TO CART" : "Out of Stock"}
+        </Button>
       )
 }
 export default AddToCartButton

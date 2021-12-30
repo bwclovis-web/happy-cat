@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import HeroComponent from "../components/Hero/Hero"
 import Seo from "../components/SEO/Seo"
 import DataGrid from "../components/Containers/ProductGrid/DataGrid"
+import CategoryGrid from "../components/Containers/ProductGrid/CategoryGrid"
 
 
 const IndexPage = () => {
@@ -31,10 +32,13 @@ const IndexPage = () => {
             shopifyId
             status
             featuredImage {
-              gatsbyImageData
+              gatsbyImageData(height: 840)
             }
             collections {
               handle
+            }
+            variants {
+              availableForSale
             }
             description
             title
@@ -75,7 +79,7 @@ const IndexPage = () => {
       <section style={{backgroundColor: "tomato"}}>
         <div className="container">
           <h2 className="h1 center">Categories</h2>
-          <DataGrid data={data.categories.nodes}/>
+          <CategoryGrid data={data.categories.nodes} />
         </div>
       </section>
     </>

@@ -1,11 +1,14 @@
 import React, {useContext} from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import CartContext from "../provider/provider";
 import AddToCartButton from "../components/AddToCartButton/AddToCartButton"
 import SEO from "../components/SEO/Seo"
 import StyledSixty from "../components/Containers/Sixty/SixtyStyled";
-
+import Accordion from "../components/Accordion/Accordion";
+import data from '../Data/care.json'
+import DataGrid from "../components/Containers/ProductGrid/DataGrid";
+import CollectionsList from "../components/CollectionsList/CollectionsList";
 
 export default function ProductPage({ data: { product } }) {
   const {
@@ -16,6 +19,7 @@ export default function ProductPage({ data: { product } }) {
     title,
     description,
     images,
+    collections,
     images: [firstImage],
   } = product
   const {client} = useContext(CartContext)
@@ -52,6 +56,8 @@ export default function ProductPage({ data: { product } }) {
   }, [productVariant.storefrontId, checkAvailability, product.storefrontId])
 
   const image = getImage(firstImage)
+
+  console.log(product.collections.products)
   return (
     <>
       <SEO title={product.title}/>
@@ -64,11 +70,12 @@ export default function ProductPage({ data: { product } }) {
         <section>
           <h1>{product.title}</h1>
           <p>{product.description}</p>
-          {/* <p>{product.price.formatted_with_symbol}</p> */}
           <AddToCartButton varId={productVariant.storefrontId} available={available}/>
+          <Accordion data={data} />
         </section>
       </StyledSixty>
       </article>
+      <CollectionsList collections={product.collections[0]}/>
     </>
   );
 }
@@ -83,6 +90,20 @@ export const pageQuery = graphql`
       images {
         id
         gatsbyImageData(layout: CONSTRAINED, width: 840, aspectRatio: 1)
+      }
+      collections {
+          handle
+          title
+        products {
+          handle
+          title
+          featuredImage {
+            gatsbyImageData
+          }
+          variants {
+            availableForSale
+          }
+        }
       }
       variants {
         availableForSale

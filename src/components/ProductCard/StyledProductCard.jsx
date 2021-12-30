@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 
 const StyledProductCard =  styled(props => <Link {...props} />)`
     text-align: center;
+    padding: 0;
 
     .title {
         padding: 1rem 0 0;
@@ -19,6 +20,7 @@ const StyledProductCard =  styled(props => <Link {...props} />)`
 
     img {
         transition: transform .3s ease-in-out;
+        
     }
 
     &:hover {

@@ -20,6 +20,7 @@ export const pageQuery = graphql`
     collection: shopifyCollection(id: { eq: $id }) {
       id
       title
+      
       products {
             handle
             title
@@ -35,6 +36,9 @@ export const pageQuery = graphql`
                     amount
                     currencyCode
                 }
+            }
+            variants {
+              availableForSale
             }
         }
     }

@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { AccordionStylesI } from "./interfaces";
 
 const StyledAccordionItem = styled.li<AccordionStylesI>`
-    border-bottom: 1rem dotted var(--coral);
+    border-bottom: .3rem dashed var(--coral);
 
     &:first-child {
         margin-top: 2.4rem;
-        border-top: 1rem dotted var(--coral);
+        border-top: .3rem dashed var(--coral);
     }
 
     button {
