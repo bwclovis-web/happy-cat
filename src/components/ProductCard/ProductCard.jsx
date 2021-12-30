@@ -7,15 +7,12 @@ const ProductCard = ({product}) => {
     const image = getImage(product.featuredImage.gatsbyImageData)
 
     return (
-       <div>
-            <StyledProductCard to={`/shop/${product.handle}`}>
-                <div className="overlay"/>
-                <GatsbyImage image={image} alt={''} />
-                <p className="title">{product.title}</p>
-                <p className="price">{formatPrice(product.priceRangeV2.maxVariantPrice.amount, product.priceRangeV2.maxVariantPrice.currencyCode)}</p>
-            </StyledProductCard>
-       </div>
-        
+        <StyledProductCard to={`/shop/${product.handle}`} key={product.id}>
+            <div className="overlay"/>
+            <GatsbyImage image={image} alt={''} />
+            <p className="title">{product.title}</p>
+            <p className="price">{formatPrice(product.priceRangeV2.maxVariantPrice.amount, product.priceRangeV2.maxVariantPrice.currencyCode)}</p>
+        </StyledProductCard>
     )
 }
 

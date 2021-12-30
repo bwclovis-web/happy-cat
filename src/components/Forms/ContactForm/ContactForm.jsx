@@ -18,7 +18,7 @@ const ContactUsForm = () => {
         if (state.succeeded) {
             resetForm();
         }
-    }, [state])
+    }, [state, resetForm])
     
     return (
         <StyledContactForm onSubmit={handleSubmit}>

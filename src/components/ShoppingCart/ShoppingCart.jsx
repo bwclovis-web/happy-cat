@@ -19,7 +19,7 @@ const ShoppingCart = () => {
         return () => {
             document.removeEventListener('click', handleClickOutside)
         }
-    }, [cartOpen])
+    }, [cartOpen, toggleCart])
 
     const handleCheckout = () => {
         toggleCart()
@@ -40,7 +40,7 @@ const ShoppingCart = () => {
                                 return <ShoppingCartItem data={item} key={item.id}/>
                             })}
                         </ul>
-                        <button onClick={handleCheckout}>TEST</button>
+                        <button onClick={handleCheckout} disabled={loading}>TEST</button>
                     </>
                 )}
             </StyledShoppingCart>

@@ -7,7 +7,7 @@ const DataGrid = ({ data }) => {
     return (
         <StyledDataGrid>
             {data.map(item => {
-               return item.featuredImage ? <ProductCard  product={item}/> : <CategoryCard product={item}/>
+               return item.featuredImage ? <ProductCard  product={item} key={item.id}/> : <CategoryCard product={item} key={item.id}/>
             })}
         </StyledDataGrid>
     )

@@ -6,14 +6,11 @@ const CategoryCard = ({product}) => {
     const image = getImage(product?.image?.gatsbyImageData)
 
     return (
-       <div>
-            <StyledProductCard to={`/shop/${product.handle}`}>
-                <div className="overlay"/>
-                <GatsbyImage image={image} alt={''} />
-                <p className="title">{product.title}</p>
-            </StyledProductCard>
-       </div>
-        
+        <StyledProductCard to={`/shop/${product.handle}`} key={product.id}>
+            <div className="overlay"/>
+            <GatsbyImage image={image} alt={''} />
+            <p className="title">{product.title}</p>
+        </StyledProductCard> 
     )
 }
 
