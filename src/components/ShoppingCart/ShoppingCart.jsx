@@ -21,6 +21,11 @@ const ShoppingCart = () => {
         }
     }, [cartOpen])
 
+    const handleCheckout = () => {
+        toggleCart()
+        window.open(checkout.webUrl)
+      }
+
     return (
         <>
             <StyledShoppingCart ref={cartRef}>
@@ -28,11 +33,15 @@ const ShoppingCart = () => {
                 {emptyCart ? 
                 <EmptyCart /> : 
                 (
-                    <ul>
-                        {checkout.lineItems.map(item => {
-                            return <ShoppingCartItem data={item} />
-                        })}
-                    </ul>
+                    <>
+                        <ul>
+                            {checkout.lineItems.map(item => {
+                                console.log(checkout.subtotalPriceV2.amount)
+                                return <ShoppingCartItem data={item} key={item.id}/>
+                            })}
+                        </ul>
+                        <button onClick={handleCheckout}>TEST</button>
+                    </>
                 )}
             </StyledShoppingCart>
         </>

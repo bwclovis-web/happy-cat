@@ -25,7 +25,7 @@ const StyledProductCard =  styled(props => <Link {...props} />)`
         img {
             transition: transform .3s ease-in-out;
             border: 3px solid var(--black);
-            transform: scale(120%);
+            transform: scale(180%);
         }
     }
 `
