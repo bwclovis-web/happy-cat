@@ -1,6 +1,7 @@
 import * as React from "react"
 import BackgroundImage from 'gatsby-background-image'
-const HeroComponent = ({data, size, children, className}) => (
+import StyledHeroContainer from "./StyledHeroContainer"
+const HeroComponent = ({data, size, heading, className}) => (
     <BackgroundImage
       Tag="section"
       fluid={data}
@@ -17,7 +18,9 @@ const HeroComponent = ({data, size, children, className}) => (
           justifyContent: "center"
       }}
     >
-      {children}
+      <StyledHeroContainer>
+        <h1>{heading}</h1>
+      </StyledHeroContainer>
     </BackgroundImage> 
 )
 

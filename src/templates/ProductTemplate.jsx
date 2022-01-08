@@ -61,7 +61,7 @@ export default function ProductPage({ data: { product } }) {
   return (
     <>
       <SEO title={product.title}/>
-      <article className="container">
+      <article className="container container-condensed">
       <StyledSixty>
         <section>
           <GatsbyImage image={image} alt={''} />

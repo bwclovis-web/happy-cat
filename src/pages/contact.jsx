@@ -37,21 +37,14 @@ const ContactPage = () => {
     `
   )
 
-  const imageData = [imageQuery.image.childImageSharp.fluid, 
-    `linear-gradient(rgba(9, 13, 13, 0.9), rgba(9, 13, 13, 0.73))`
-  ].reverse()
+  const imageData = imageQuery.image.childImageSharp.fluid
   
   return (
     <ContactUsStyles>
       <Seo title="contact us" />
-        <HeroComponent data={imageData} size='60' className='contact-hero'>
-        <section className='container'>
-          <h1>Contact Us</h1>
-          <p>Have a question, comment, request? Let us know. Please check out the FAQ's below. </p>
-          </section>
-        </HeroComponent>
+        <HeroComponent data={imageData} size='60' heading="Contact Us" />
 
-      <StyledSixty className='container' inverted={false}>
+      <StyledSixty className='container container-condensed' inverted={false}>
         <section>
           <h2>Frequently Asked Questions</h2>
           <Accordion data={data}/>

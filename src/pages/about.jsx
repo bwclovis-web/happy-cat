@@ -36,19 +36,14 @@ const AboutPage = () => {
   )
 
   
-  const imageData = [imageQuery.image.childImageSharp.fluid, 
-    `linear-gradient(rgba(9, 13, 13, 0.9), rgba(9, 13, 13, 0.73))`
-  ].reverse()
+  const imageData = imageQuery.image.childImageSharp.fluid
 
   return(
     <AboutPageStyles>
       <Seo title="About Us" />
-      <HeroComponent data={imageData} size='60' className='contact-hero'>
-        <section className='container'>
-          <h1>Contact Us</h1>
-          </section>
-        </HeroComponent>
-      <StyledSixty className="container" inverted={true}>
+      <HeroComponent data={imageData} size='60' heading="who we are" />
+
+      <StyledSixty className="container container-condensed" inverted={true}>
         <ProfileCard image={imageQuery.profile.childImageSharp.gatsbyImageData}/>
         
         <section>

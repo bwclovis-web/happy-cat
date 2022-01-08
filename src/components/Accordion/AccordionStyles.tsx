@@ -15,11 +15,9 @@ const StyledAccordionItem = styled.li<AccordionStylesI>`
         display: block;
         text-align: left;
         padding: 2rem 0;
-        margin-bottom: 1rem;
         display: flex;
         width: 100%;
         align-items: center;
-        
     }
 
     .bottom {

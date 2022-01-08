@@ -6,7 +6,7 @@ import DataGrid from "../components/Containers/ProductGrid/DataGrid";
 const CategoryPage = ({ data: { collection } }) => (
     <>
       <Seo title={collection.title}/>
-      <article className="container">
+      <article className="container container-condensed">
         <h1>{collection.title}</h1>
         <DataGrid data={collection.products}/>
       </article>

@@ -21,7 +21,8 @@ const ShopPage = () => {
             }
             featuredImage {
               gatsbyImageData(
-                width: 500
+                width: 300
+                height: 500
               )
             }
             description
@@ -45,7 +46,7 @@ const ShopPage = () => {
   return(
     <>
       <Seo title="Shop page" />
-      <section className="container">
+      <section className="container container-condensed">
         <h1>Whats in the Shop</h1>
         <DataGrid data={pageQuery.allProducts.nodes}/>
       </section> 

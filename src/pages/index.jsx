@@ -22,7 +22,7 @@ const IndexPage = () => {
             id
             handle
             image {
-              gatsbyImageData
+              gatsbyImageData(height: 560)
             }
             title
           }
@@ -58,21 +58,16 @@ const IndexPage = () => {
       }
     `
   )
-
-  const imageData = [data.image.childImageSharp.fluid, 
-    `linear-gradient(rgba(9, 13, 13, 0.9), rgba(71, 153, 204, 0.73))`
-  ].reverse()
-
-  console.log(data.categories)
+  const imageData = data.image.childImageSharp.fluid
 
   return (
     <>
       <Seo title="Home page" />
-      <HeroComponent data={imageData} size='75'/>
+      <HeroComponent data={imageData} size='75'heading="Welcome"/>
       
       <section style={{backgroundColor: "rebeccapurple"}}>
-        <div className="container">
-          <h2 className="h1 center">New Stuff</h2>
+        <div className="container container-condensed">
+          <h2 className="h1 center">Just In</h2>
           <DataGrid data={data.products.nodes}/>
         </div>
       </section>

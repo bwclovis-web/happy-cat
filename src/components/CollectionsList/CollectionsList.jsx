@@ -4,13 +4,16 @@ import DataGrid from "../Containers/ProductGrid/DataGrid"
 
 const CollectionsList = ({collections}) =>  (
     <div style={{backgroundColor: 'grey'}}>
-        <section className="container">
+        <section className="container container-condensed">
             <h2>
                 <Link to={`/shop/${collections.handle}`}>
                     Other items in {collections.title}
                 </Link>
             </h2>
-            <DataGrid data={collections.products}/>
+            <div style={{display:'flex'}}>
+                <DataGrid data={collections.products}/>
+                <p>more</p>
+            </div>
         </section>
     </div>
 )
