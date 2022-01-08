@@ -3,12 +3,31 @@ import styled from 'styled-components'
 const StyledShoppingCart = styled.section`
     position: fixed;
     top: 0;
-    padding: 2rem;
     height: 100%;
     background-color: var(--coral);
-    width: 30%;
+    width: 100%;
     right: 0;
     z-index: 20;
+
+    @media(min-width: 786px) {
+        width: 40%;
+    }
+
+    @media(min-width: 1200px) {
+        width: 30%;
+    }
+
+    .cart-heading {
+        background-color: rgba(244,244,244,0.5);
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            padding-bottom: 0;
+        }
+    }
 
     ul {
         display: flex;

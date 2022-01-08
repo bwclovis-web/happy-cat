@@ -1,7 +1,6 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import StyledProductCard from "./StyledProductCard"
-import BackgroundImage from 'gatsby-background-image'
 import Button from "../Button/Button"
 
 const ProductCard = ({product}) => {
@@ -12,7 +11,14 @@ const ProductCard = ({product}) => {
     return (
         <StyledProductCard to={`/shop/${product.handle}`} key={product.id}>
             <div className="overlay">
-                <Button scHidden={true} tabIndex="-1">View Details</Button>
+                <Button 
+                    scHidden={true} 
+                    tabIndex="-1" 
+                    config="default"
+                    size="lg"
+                >
+                    View Details
+                </Button>
             </div>
             <GatsbyImage image={image} alt={''} />
             <p className="title">{product.title}</p>

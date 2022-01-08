@@ -65,6 +65,8 @@ const ContactUsForm = () => {
                     type="submit"
                     disabled={state.submitting}
                     submitStatus={state}
+                    config="default"
+                    size="lg"
                 >
                     {state.succeeded ? `MESSAGE RECEIVED` : 'SAY HELLO'}
                 </Button>

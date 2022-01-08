@@ -5,12 +5,14 @@ const Typography = createGlobalStyle`
     font-family:"Libre Franklin", OpenSans-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }
+
   p, li {
     letter-spacing: 0.5px;
     font-size: clamp(1.6rem, 2vw, 2rem);
     line-height: 1.5;
     font-weight: 400;
   }
+
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     margin: 0;

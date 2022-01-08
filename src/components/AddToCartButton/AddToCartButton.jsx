@@ -15,6 +15,8 @@ const AddToCartButton = ({varId, available}) => {
           onClick={addToCart}
           disabled={!available || loading}
           submitStatus={loading}
+          config="default"
+          size="lg"
         >
           {available ? "ADD TO CART" : "Out of Stock"}
         </Button>
