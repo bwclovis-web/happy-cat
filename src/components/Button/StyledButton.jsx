@@ -9,7 +9,7 @@ const ButtonStyles = styled.button`
     padding: 2rem 2.6rem;
     color: ${props => props?.submitStatus?.submitting ? '' : 'var(--black)'};
     display: ${props => props.position === 'center' && 'block'};
-    margin: ${props => props.position === 'center' && '0 auto'};
+    margin: ${props => props.position === 'center' ? '0 auto' : '0 0 2rem'};
     transition: all .1s ease-in;
     border-radius: ${props => props?.submitStatus?.submitting ? '50%' : '0'};
 

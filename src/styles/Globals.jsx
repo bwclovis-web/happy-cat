@@ -75,11 +75,14 @@ const GlobalStyles = createGlobalStyle`
       padding-top: clamp(2.6rem, 6vw, 10rem); 
       padding-bottom: clamp(2.6rem, 6vw, 10rem);
       width: 100%;
+      max-width: 2000px;
+      padding-left: clamp(1rem, 3vw, 2rem);
+      padding-right: clamp(1rem, 3vw, 2rem);
 
       &-condensed {
         max-width: 1600px;
-        padding-left: clamp(2rem, 3vw, 4rem);
-        padding-right: clamp(2rem, 3vw, 4rem);
+        padding-left: clamp(1rem, 3vw, 4rem);
+        padding-right: clamp(1rem, 3vw, 4rem);
       }
   }
 

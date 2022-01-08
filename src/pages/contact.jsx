@@ -36,14 +36,11 @@ const ContactPage = () => {
       }
     `
   )
-
   const imageData = imageQuery.image.childImageSharp.fluid
-  
   return (
     <ContactUsStyles>
       <Seo title="contact us" />
-        <HeroComponent data={imageData} size='60' heading="Contact Us" />
-
+      <HeroComponent data={imageData} size='70' heading="Contact Us" />
       <StyledSixty className='container container-condensed' inverted={false}>
         <section>
           <h2>Frequently Asked Questions</h2>
@@ -54,7 +51,6 @@ const ContactPage = () => {
         </section>
       </StyledSixty>
     </ContactUsStyles>
-    
   )
 }
  

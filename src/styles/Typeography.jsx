@@ -1,22 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
-import font from '../assets/fonts/Chicle-Regular.ttf'
-import bodyFont from '../assets/fonts/LibreFranklin-VariableFont_wght.ttf'
 const Typography = createGlobalStyle`
-  @font-face {
-    font-family: Chicle-Regular;
-    src: url(${font});
-    font-weight: 300 700;
-    font-display: fallback;
-  }
 
-  @font-face {
-    font-family: LibreFranklin;
-    src: url(${bodyFont});
-    font-weight: 300 700;
-    font-display: fallback;
-  }
   html {
-    font-family:"LibreFranklin", OpenSans-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:"Libre Franklin", OpenSans-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }
   p, li {
@@ -28,24 +14,28 @@ const Typography = createGlobalStyle`
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     margin: 0;
-    font-family: 'Chicle-Regular';
+    font-family: 'Chicle';
 
   }
 
   h1, .h1 {
-    font-size: clamp(7.6rem, 10vw, 10.8rem);
+    font-size: clamp(5.6rem, 10vw, 10.8rem);
     line-height: 1;
     padding-bottom: clamp(1rem, 2vw, 2rem);
-    font-family: 'Chicle-Regular';
+    font-family: 'Chicle';
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: -0.7rem 0.7rem rgba(0,0,0,0.4);
+    text-shadow: -0.3rem 0.3rem rgba(0,0,0,0.4);
+
+    @media(min-width: 786px) {
+      text-shadow: -0.7rem 0.7rem rgba(0,0,0,0.4);
+    }
   }
 
   h2, .h2 {
-    font-size: 6.6rem;
+    font-size: clamp(4.8rem, 10vw, 6.6rem);
     margin: 0;
-    font-family: 'Chicle-Regular';
+    font-family: 'Chicle';
     font-weight: 600;
     text-shadow: -0.32rem 0.32rem rgba(0,0,0,0.15);
     line-height: .9;
@@ -53,7 +43,7 @@ const Typography = createGlobalStyle`
   }
 
   h3, .h3 {
-    font-size: clamp(2.0rem, 2.5vw, 3.4rem);
+    font-size: clamp(2rem, 2.5vw, 3.4rem);
     font-weight: 500;
   }
 
@@ -79,6 +69,11 @@ const Typography = createGlobalStyle`
 
 
   .center {
+    text-align: center;
+  }
+
+  .call-out {
+    font-size: rem;
     text-align: center;
   }
 `

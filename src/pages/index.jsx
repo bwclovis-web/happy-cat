@@ -63,17 +63,19 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="Home page" />
-      <HeroComponent data={imageData} size='75'heading="Welcome"/>
+      <HeroComponent data={imageData} size='70'heading="Welcome"/>
       
-      <section style={{backgroundColor: "rebeccapurple"}}>
+      <section>
         <div className="container container-condensed">
           <h2 className="h1 center">Just In</h2>
-          <DataGrid data={data.products.nodes}/>
+          <p className="h3 center">All Dyed up and waiting for you.</p>
+          <DataGrid data={data.products.nodes} display={'3'}/>
         </div>
       </section>
-      <section style={{backgroundColor: "tomato"}}>
+      <section style={{backgroundColor: "rgb(82, 204, 186)"}}>
         <div className="container">
           <h2 className="h1 center">Categories</h2>
+          <p className="h3 center">Shop by category to find yer thing</p>
           <CategoryGrid data={data.categories.nodes} />
         </div>
       </section>

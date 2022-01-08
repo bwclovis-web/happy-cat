@@ -6,6 +6,19 @@ const NavStyles = styled.header `
     z-index: 2;
     text-align: center;
 
+    .top-nav {
+        background-color: var(--peacock);
+
+        &-container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            justify-content: flex-end;
+            padding-left: clamp(1rem, 3vw, 2rem);
+            padding-right: clamp(1rem, 3vw, 2rem);
+        }
+    }
+
     @media(min-width: 786px) {
         nav {
             display: flex;
@@ -46,7 +59,7 @@ const NavStyles = styled.header `
         letter-spacing: .1rem;
 
         &:not(.h1) {
-            padding: 1rem 1.4rem;
+            padding: 1rem;
         }
     }
 
@@ -55,7 +68,7 @@ const NavStyles = styled.header `
     }
 
     svg {
-        fill: var(--peacock);
+        fill: var(--marino);
     }
 `
 

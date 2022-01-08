@@ -6,7 +6,7 @@ const StyledSixty = styled.div`
         padding-bottom: 4rem;
     }
 
-    @media(min-width: 811px) {
+    @media(min-width: 786px) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

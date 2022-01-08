@@ -8,10 +8,11 @@ const StyledHeroContainer = styled.div`
     color: var(--peacock);
     width: 100%;
     justify-content: center;
+    align-items: center;
     height: 100%;
 
     @media(min-width: 786px) {
-        width: 50%;
+        width: 60%;
         margin-top: -6rem;
         border-radius: 20px;
         height: auto;
@@ -22,7 +23,7 @@ const StyledHeroContainer = styled.div`
      h1 {
          font-size: clamp(9rem, 10vw, 18rem);
          color: var(--peacock);
-         letter-spacing: .8rem;
+         letter-spacing: clamp(0rem, 10vw, .6rem);
          text-align: center;
          padding-bottom: 0;
      }

@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useCallback } from 'react';
 
 const UseCart = () => {
     const [cartOpen, setCartOpen] = useState(false);
-
-    const toggleCart = () => setCartOpen(!cartOpen);
+    const toggleCart = useCallback(() => {
+        setCartOpen(!cartOpen)
+    },[cartOpen]);
 
     useEffect(() => {
         const root = document.documentElement;

@@ -5,9 +5,15 @@ import { Link } from "gatsby"
 const StyledProductCard =  styled(props => <Link {...props} />)`
     position: relative;
     box-shadow: 0 0 6px rgba(0,0,0,0.7);
-    border: 1.5px solid var(--coral);
+    border: .2rem solid var(--coral);
     border-radius: var(--radius);
     overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+
+    @media(min-width: 786px) {
+        width: 100%;
+    }
 
     &:first-of-type {
         border-top-left-radius: 10%;
@@ -20,10 +26,10 @@ const StyledProductCard =  styled(props => <Link {...props} />)`
     .title {
         padding: 1rem 1rem 1rem 3rem;
         font-size: 2.4rem;
-        letter-spacing: .3rem;
-        bottom: 0;
-        left: 0;
+        letter-spacing: .2rem;
+        font-size: 1.6rem;
         background-color: var(--coral);
+        color: var(--black);
     }
 
     .overlay {
@@ -33,18 +39,13 @@ const StyledProductCard =  styled(props => <Link {...props} />)`
         justify-content: center;
     }
 
-    .price {
-        font-weight: 300;
-        font-size: 3rem;
-        color: var(--marino);
-    }
-
     img {
         transition: transform .6s cubic-bezier(.17,.67,.83,.67);
         overflow: hidden;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         box-shadow: 0 0 14px rgba(0,0,0,0.85);
         border-color: var(--marino);
 

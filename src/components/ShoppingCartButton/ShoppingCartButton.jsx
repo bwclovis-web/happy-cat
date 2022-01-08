@@ -9,8 +9,6 @@ const ShoppingCartButton = () => {
     const emptyCart = checkout.lineItems.length === 0
 
     const handleCartClick = () => {
-
-        console.log('clicked', cartOpen)
         toggleCart()
     }
 

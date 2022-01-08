@@ -12,7 +12,6 @@ const CollectionsList = ({collections}) =>  (
             </h2>
             <div style={{display:'flex'}}>
                 <DataGrid data={collections.products}/>
-                <p>more</p>
             </div>
         </section>
     </div>

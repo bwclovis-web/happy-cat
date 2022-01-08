@@ -1,11 +1,12 @@
 import * as React from "react"
+import "@fontsource/chicle";
+import "@fontsource/libre-franklin"
 import GlobalStyles from "../../styles/Globals"
 import Typography from "../../styles/Typeography"
 import Header from "../Header/Header"
-import {CartProvider} from '../../provider/provider'
 
 const LayoutWrapper = ({children}) => (
-    <CartProvider>
+    <>
         <GlobalStyles />
         <Typography />
         <div className="overlay"/>
@@ -13,7 +14,7 @@ const LayoutWrapper = ({children}) => (
         <main>
             {children}
         </main>
-    </CartProvider>
+    </>
 )
 
 export default LayoutWrapper

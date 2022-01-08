@@ -2,9 +2,9 @@ import * as React from "react"
 import ProductCard from "../../ProductCard/ProductCard";
 import StyledDataGrid from "./DataGridStyles";
 
-const DataGrid = ({ data }) => {
+const DataGrid = ({ data, display }) => {
     return (
-        <StyledDataGrid>
+        <StyledDataGrid display={display}>
             {data.map(item => {
                 if(!item.variants[0].availableForSale) {
                     return

@@ -22,7 +22,7 @@ export default function ProductPage({ data: { product } }) {
     collections,
     images: [firstImage],
   } = product
-  const {client} = useContext(CartContext)
+  const {client, toggleCart} = useContext(CartContext)
 
   const [variant, setVariant] = React.useState({ ...initialVariant })
   const [quantity, setQuantity] = React.useState(1)
@@ -56,8 +56,6 @@ export default function ProductPage({ data: { product } }) {
   }, [productVariant.storefrontId, checkAvailability, product.storefrontId])
 
   const image = getImage(firstImage)
-
-  console.log(product.collections.products)
   return (
     <>
       <SEO title={product.title}/>

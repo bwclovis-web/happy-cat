@@ -41,7 +41,7 @@ const AboutPage = () => {
   return(
     <AboutPageStyles>
       <Seo title="About Us" />
-      <HeroComponent data={imageData} size='60' heading="who we are" />
+      <HeroComponent data={imageData} size='70' heading="who we are" />
 
       <StyledSixty className="container container-condensed" inverted={true}>
         <ProfileCard image={imageQuery.profile.childImageSharp.gatsbyImageData}/>
