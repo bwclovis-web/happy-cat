@@ -21,6 +21,7 @@
     "@chec/commerce.js": "^2.8.0",
     "@chec/gatsby-source-chec": "^1.3.0",
     "@fontsource/chicle": "^4.5.0",
+    "@fontsource/libre-franklin": "^4.5.0",
     "@formspree/react": "^2.2.4",
     "@react-icons/all-files": "^4.1.0",
     "@types/chec__commerce.js": "^2.8.4",

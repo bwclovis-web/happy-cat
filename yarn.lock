@@ -1351,10 +1351,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/chicle/-/chicle-4.5.0.tgz#098fc41099919c53ed71f707b890dc931cee8986"
   integrity sha512-+C2NLQAkTz2FWmz2tWeesfrQRqhIR2FB/pNr0nLBfRaBwXA+8EU1AgDg5a2W+wasEXBDO/b3F+1Yd8AOVyzC0A==
 
-"@fontsource/libre-baskerville@^4.5.0":
+"@fontsource/libre-franklin@^4.5.0":
   version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/libre-baskerville/-/libre-baskerville-4.5.0.tgz#82871a1e7fc5b2455b37db17342f73aade205eca"
-  integrity sha512-Mutp11P4DtpYYT3NlB5i5TQ7GU53NL1AHcLnqEQDRkLBFuziILhXwOsE+J5IID16qqJ3+VwynkvWLjDoWCijOw==
+  resolved "https://registry.yarnpkg.com/@fontsource/libre-franklin/-/libre-franklin-4.5.0.tgz#6193cd6e5ef64b3d5a3c02420d79ea81a276c73e"
+  integrity sha512-pFJyUqbnQhuyyOa84GoAqZacRp4CTaZehBWD5/g8TaJXzmV3uKJpDczfYafE+UnMKKW60RLNx0NCucrDMnn3Zg==
 
 "@formspree/core@^2.6.1":
   version "2.6.2"
