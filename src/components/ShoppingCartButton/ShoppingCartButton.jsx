@@ -5,19 +5,15 @@ import {RiShoppingCartLine} from '@react-icons/all-files/ri/RiShoppingCartLine'
 import {RiShoppingCartFill} from '@react-icons/all-files/ri/RiShoppingCartFill'
 
 const ShoppingCartButton = () => {
-    const {toggleCart, cartOpen, checkout} = useContext(CartContext)
+    const {toggleCart, checkout} = useContext(CartContext)
     const emptyCart = checkout.lineItems.length === 0
-
-    const handleCartClick = () => {
-        toggleCart()
-    }
 
     return (
         <>
-            <button onClick={handleCartClick} className="cart-button">
+            <button onClick={() => toggleCart()} className="cart-button">
                 {emptyCart ? <RiShoppingCartLine size={30}/> : <RiShoppingCartFill size={30}/>}
             </button>
-            {cartOpen && <ShoppingCart />}
+            <ShoppingCart /> 
         </>
     )
 }

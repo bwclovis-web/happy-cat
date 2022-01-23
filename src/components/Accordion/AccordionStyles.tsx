@@ -11,7 +11,6 @@ const StyledAccordionItem = styled.li<AccordionStylesI>`
 
     button {
         position: relative;
-        z-index: 6;
         display: block;
         text-align: left;
         padding: 2rem 0;

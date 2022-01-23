@@ -1,39 +1,34 @@
 import React, {useContext} from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import CartContext from "../provider/provider";
 import AddToCartButton from "../components/AddToCartButton/AddToCartButton"
-import SEO from "../components/SEO/Seo"
+import Seo from "../components/SEO/Seo"
 import StyledSixty from "../components/Containers/Sixty/SixtyStyled";
 import Accordion from "../components/Accordion/Accordion";
 import data from '../Data/care.json'
-import DataGrid from "../components/Containers/ProductGrid/DataGrid";
 import CollectionsList from "../components/CollectionsList/CollectionsList";
 
 export default function ProductPage({ data: { product } }) {
   const {
-    options,
-    variants,
+    // options,
+    // variants,
     variants: [initialVariant],
-    priceRangeV2,
-    title,
-    description,
-    images,
-    collections,
+    // priceRangeV2,
+    // title,
+    // description,
+    // images,
+    // collections,
     images: [firstImage],
   } = product
-  const {client, toggleCart} = useContext(CartContext)
+  const {client} = useContext(CartContext)
 
   const [variant, setVariant] = React.useState({ ...initialVariant })
-  const [quantity, setQuantity] = React.useState(1)
+  // const [quantity, setQuantity] = React.useState(1)
   const productVariant = client.product.helpers.variantForOptions(product, variant) || variant
   const [available, setAvailable] = React.useState(
     productVariant.availableForSale
   )
-
-  const handleOnClick = () => {
-    console.log('clicked')
-  }
 
   const checkAvailability = React.useCallback(
     (productId) => {
@@ -55,10 +50,11 @@ export default function ProductPage({ data: { product } }) {
     checkAvailability(product.storefrontId)
   }, [productVariant.storefrontId, checkAvailability, product.storefrontId])
 
+
   const image = getImage(firstImage)
   return (
     <>
-      <SEO title={product.title}/>
+      <Seo title={product.title}/>
       <article className="container container-condensed">
       <StyledSixty>
         <section>
@@ -68,7 +64,10 @@ export default function ProductPage({ data: { product } }) {
         <section>
           <h1>{product.title}</h1>
           <p>{product.description}</p>
-          <AddToCartButton varId={productVariant.storefrontId} available={available}/>
+          <AddToCartButton 
+            varId={productVariant.storefrontId} 
+            available={available}
+          />
           <Accordion data={data} />
         </section>
       </StyledSixty>

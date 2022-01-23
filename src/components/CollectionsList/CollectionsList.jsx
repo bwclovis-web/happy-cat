@@ -10,7 +10,7 @@ const CollectionsList = ({collections}) =>  (
                     Other items in {collections.title}
                 </Link>
             </h2>
-            <div style={{display:'flex'}}>
+            <div>
                 <DataGrid data={collections.products}/>
             </div>
         </section>

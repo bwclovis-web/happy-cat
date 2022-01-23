@@ -12,7 +12,7 @@ const ShoppingCart = () => {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (cartRef.current && !cartRef.current.contains(event.target)) {
+            if (cartRef.current && cartRef.current.contains(event.target)) {
                 toggleCart()
             }
         }
@@ -29,26 +29,29 @@ const ShoppingCart = () => {
 
     return (
         <>
-            <StyledShoppingCart ref={cartRef}>
-                <div className="cart-heading">
-                    <p>I be a cart</p>
-                    <Button onClick={() => toggleCart()}>
-                        x
-                    </Button>
-                </div>
-                {emptyCart ? <EmptyCart /> : 
-                    (
-                        <>
-                            <ul>
-                                {checkout.lineItems.map(item => {
-                                    console.log(checkout.subtotalPriceV2.amount)
-                                    return <ShoppingCartItem data={item} key={item.id}/>
-                                })}
-                            </ul>
-                            <button onClick={handleCheckout} disabled={loading}>TEST</button>
-                        </>
-                    )
-                }
+            <StyledShoppingCart  aria-hidden="true" open={cartOpen}>
+                {cartOpen && <div className="overlay" ref={cartRef}/>}
+                <section className="cart">
+                    <div className="cart-heading">
+                        <p>Items in cart</p>
+                        <Button onClick={() => toggleCart()}>
+                            x
+                        </Button>
+                    </div>
+                    {emptyCart ? <EmptyCart /> : 
+                        (
+                            <>
+                                <ul>
+                                    {checkout.lineItems.map(item => {
+                                        console.log(checkout.subtotalPriceV2.amount)
+                                        return <ShoppingCartItem data={item} key={item.id}/>
+                                    })}
+                                </ul>
+                                <button onClick={handleCheckout} disabled={loading}>TEST</button>
+                            </>
+                        )
+                    }
+                </section>
             </StyledShoppingCart>
         </>
     )

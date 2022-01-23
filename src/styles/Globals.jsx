@@ -125,6 +125,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .cart-open {
+    overflow: hidden;
+  }
+
 `
 
 export default GlobalStyles

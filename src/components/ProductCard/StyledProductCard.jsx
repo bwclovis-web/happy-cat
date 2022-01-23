@@ -12,7 +12,8 @@ const StyledProductCard =  styled(props => <Link {...props} />)`
     margin: 0 auto;
 
     @media(min-width: 786px) {
-        width: 100%;
+        width: 20%;
+        margin: 0;
     }
 
     &:first-of-type {

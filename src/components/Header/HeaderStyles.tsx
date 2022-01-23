@@ -69,6 +69,7 @@ const NavStyles = styled.header `
 
     svg {
         fill: var(--marino);
+        pointer-events: none;
     }
 `
 

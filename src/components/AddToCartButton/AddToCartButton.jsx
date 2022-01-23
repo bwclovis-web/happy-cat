@@ -3,7 +3,11 @@ import CartContext from "../../provider/provider";
 import Button from "../Button/Button";
 
 const AddToCartButton = ({varId, available}) => {
-    const { addVariantToCart, loading } = React.useContext(CartContext)
+    const { addVariantToCart, loading, checkout } = React.useContext(CartContext)
+
+    React.useEffect(() => {
+      console.log(checkout)
+    }, [checkout])
 
     const addToCart = () => {
         addVariantToCart(varId, 1)

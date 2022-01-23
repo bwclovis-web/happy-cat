@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import UseCart from '../lib/useCart'
+import UseCart from '../lib/useApp'
 import Client from 'shopify-buy'
 
 const client = Client.buildClient({
