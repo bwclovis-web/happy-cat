@@ -8,6 +8,7 @@ import StyledSixty from "../components/Containers/Sixty/SixtyStyled";
 import Accordion from "../components/Accordion/Accordion";
 import data from '../Data/care.json'
 import CollectionsList from "../components/CollectionsList/CollectionsList";
+import Toast from "../components/Toast/Toast";
 
 export default function ProductPage({ data: { product } }) {
   const {
@@ -22,6 +23,7 @@ export default function ProductPage({ data: { product } }) {
     images: [firstImage],
   } = product
   const {client} = useContext(CartContext)
+  const [toast, setShowToast] = React.useState(false);
 
   const [variant, setVariant] = React.useState({ ...initialVariant })
   // const [quantity, setQuantity] = React.useState(1)
@@ -40,6 +42,7 @@ export default function ProductPage({ data: { product } }) {
 
         if (result.length > 0) {
           setAvailable(result[0].available)
+          console.log('oh hae')
         }
       })
     },
@@ -49,6 +52,12 @@ export default function ProductPage({ data: { product } }) {
   React.useEffect(() => {
     checkAvailability(product.storefrontId)
   }, [productVariant.storefrontId, checkAvailability, product.storefrontId])
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setShowToast(false)
+    }, 4500);
+  }, [toast])
 
 
   const image = getImage(firstImage)
@@ -67,12 +76,14 @@ export default function ProductPage({ data: { product } }) {
           <AddToCartButton 
             varId={productVariant.storefrontId} 
             available={available}
+            toast={setShowToast}
           />
           <Accordion data={data} />
         </section>
       </StyledSixty>
       </article>
       <CollectionsList collections={product.collections[0]}/>
+      <Toast item={product} display={toast} />
     </>
   );
 }
@@ -84,6 +95,12 @@ export const pageQuery = graphql`
       title
       description
       storefrontId
+      priceRangeV2 {
+        maxVariantPrice {
+          amount
+          currencyCode
+        }
+      }
       images {
         id
         gatsbyImageData(layout: CONSTRAINED, width: 840, aspectRatio: 1)
