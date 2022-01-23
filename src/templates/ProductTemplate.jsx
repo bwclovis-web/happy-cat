@@ -42,7 +42,6 @@ export default function ProductPage({ data: { product } }) {
 
         if (result.length > 0) {
           setAvailable(result[0].available)
-          console.log('oh hae')
         }
       })
     },

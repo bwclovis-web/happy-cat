@@ -43,7 +43,6 @@ const ShoppingCart = () => {
                             <>
                                 <ul>
                                     {checkout.lineItems.map(item => {
-                                        console.log(checkout.subtotalPriceV2.amount)
                                         return <ShoppingCartItem data={item} key={item.id}/>
                                     })}
                                 </ul>
